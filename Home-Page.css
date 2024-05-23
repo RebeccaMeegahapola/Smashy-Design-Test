@@ -39,7 +39,7 @@ body {
 /* Main content */
 
 .main-header {
-    margin: 120px auto;
+    margin: 120px auto 50px auto;
     padding: 0 0 0 150px ;
 }
 
@@ -58,12 +58,46 @@ body {
     text-decoration: underline;
     font-weight: 500;
     color: black;
+    font-size: 16px;
 }
+
+.text1 i {
+    margin-left: 10px;
+}
+
+.banner-section {
+    height: 600px;
+}
+
+.text2 p {
+    font-size: 36px;
+}
+
+.btn-group1 {
+    gap: 5px;
+}
+
+.btn1 {
+    background-color: #F1F1F1;
+    border: 1px solid #F1F1F1;
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    margin: 0 10px;
+  }
 
 /* Laptop */
 @media only screen and (max-width: 1399px) {
     .main-header {
         padding: 0;
+        margin: 120px auto 50px 62px
     }
 } 
 
