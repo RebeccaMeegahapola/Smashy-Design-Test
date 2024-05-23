@@ -85,13 +85,10 @@ body {
     padding: 5px;
 }
 
-.carousel-item {
-    display: flex;
-    justify-content: center;
-  }
-  .card {
-    margin: 0 10px;
-  }
+.swiper-slide img{
+    width: 100%;
+    height: auto;
+}
 
 /* Laptop */
 @media only screen and (max-width: 1399px) {
