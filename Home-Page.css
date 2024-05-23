@@ -1,0 +1,122 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Plus Jakarta Sans;
+}
+
+/*Navbar*/
+
+.navbar .navbar-nav .nav-link {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar-nav {
+    gap: 14px;
+}
+
+.btn-talk {
+    width: 118px;
+    height: 44px;
+    background-color: #001897;
+    border-radius: 31.5px;
+}
+
+.btn-talk:hover {
+    background-color: #000F5C;
+}
+  
+.sm-icons {
+    display: none;
+}
+
+.sm-icons .nav-link {
+    padding-right: 1em;
+}
+  
+/* Main content */
+
+.main-header {
+    margin: 120px auto;
+    padding: 0 0 0 150px ;
+}
+
+.main-header h1{
+    font-size: 53px;
+    font-weight: 700;
+    text-align: left;
+    width: 65%;
+}
+
+.text1 p {
+    font-size: 16px;
+}
+
+.text1 a {
+    text-decoration: underline;
+    font-weight: 500;
+    color: black;
+}
+
+/* Laptop */
+@media only screen and (max-width: 1399px) {
+    .main-header {
+        padding: 0;
+    }
+} 
+
+@media only screen and (max-width: 767px) {
+    /*Navbar*/
+
+    .navBar{
+        padding: 5px 30px;
+    }
+
+    .navbar-nav {
+        margin-top: 20px;
+    }
+
+    .navbar .navbar-nav .nav-item:hover {
+        background-color: #001897;
+        padding: 5px;
+    }
+
+    .navbar .navbar-nav .nav-link:hover {
+        color: white;
+    }
+
+    .sm-icons {
+      flex-direction: row;
+      display: flex;
+      color: black;
+      margin-top: 240px;
+    }
+
+    .sm-icons li a{
+        font-size: 13px!important;
+    }
+
+    .navbar-toggler {
+        border: 0px;
+    }
+
+    .btn-talk {
+        display: none;
+    }
+
+    /* Main content */
+
+    .main-header {
+        padding: 30px;
+        margin: 0;
+    }
+
+    .main-header h1{
+        font-size: 28px;
+        width: 80%;
+    }
+}
+
+
