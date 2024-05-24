@@ -40,7 +40,7 @@ body {
 
 .main-header {
     margin: 120px auto 50px auto;
-    padding: 0 0 0 150px ;
+    padding: 0 50px 0 50px ;
 }
 
 .main-header h1{
@@ -137,6 +137,12 @@ body {
     background-color: #F5F5F5;
 }
 
+.processBtnDiv {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
 .ourProcessbtn {
     padding: 12px;
     border: 2px solid black;
@@ -147,6 +153,12 @@ body {
     width: 65%;
     text-align: center;
 }
+
+.card:hover {
+    transform: scale(0.9, 0.9);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  }
 
 /* Form */
 .formHeader {
