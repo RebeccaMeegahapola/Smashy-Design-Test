@@ -188,6 +188,10 @@ input[type=submit]:hover {
     text-align: center;
 }
 
+.card {
+    height: 100%;
+}
+
 /* Laptop */
 @media only screen and (max-width: 1399px) {
     .main-header {
