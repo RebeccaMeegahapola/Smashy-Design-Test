@@ -154,6 +154,10 @@ body {
     text-align: center;
 }
 
+.ourProcessbtn i {
+    margin-left: 5px;
+}
+
 .card:hover {
     transform: scale(0.95);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
