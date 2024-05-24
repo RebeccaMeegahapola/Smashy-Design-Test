@@ -67,6 +67,11 @@ body {
     font-size: 16px;
 }
 
+.desktopBtn img {
+    width: 16px;
+    height: 16px;
+}
+
 .text1 i {
     margin-left: 10px;
 }
@@ -101,14 +106,24 @@ body {
 .button-next {
     float: right;
     height: 45px;
-    line-height: 45px;  
     width: 45px;  
-    font-size: 16px;
     border: 1px solid #444444;
     border-radius: 50%;
     color: #444444;
-    text-align: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.button-next:hover {
+    transform: scale(1.1);
+}
+
+.button-next img {
+    width: 16px;
+    height: 16px;
 }
 
 .swipper-wrapper {
@@ -160,12 +175,14 @@ body {
     color: black;
     text-decoration: none;
     font-size: 14px;
-    width: 65%;
+    width: max-content;
     text-align: center;
+    transition: all 0.5s;
 }
 
 .ourProcessbtn:hover {
     background: #001897;
+    border: 1px solid #001897;
     color: white;
 }
 
@@ -212,6 +229,7 @@ input[type=submit] {
     cursor: pointer;
     width: 40%;
     font-size: 14px;
+    transition: all 0.5s;
 }
   
 input[type=submit]:hover {
