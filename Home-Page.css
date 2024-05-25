@@ -306,6 +306,7 @@ input[type=submit]:hover {
     justify-content: center;
     align-items: center;
     transition: all 0.5s;
+    margin: 15px 0;
 }
 
 .button-icon:hover {
