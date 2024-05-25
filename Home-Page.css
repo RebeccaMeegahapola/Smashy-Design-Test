@@ -190,6 +190,11 @@ body {
     margin-left: 5px;
 }
 
+.card {
+    height: 100%;
+    transition: all 0.5s;
+}
+
 .card-link {
     text-decoration: none;
     color: inherit;
@@ -241,9 +246,64 @@ input[type=submit]:hover {
     text-align: center;
 }
 
-.card {
-    height: 100%;
+/* Get In Touch */
+.getInTouchDiv {
+    text-align: center;
+}
+
+.getInTouchBtn {
+    padding: 15px 30px;
+    background: #000F5C;
+    border: 1px solid #000F5C;
+    border-radius: 31.5px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    width: max-content;
+    text-align: center;
+}
+
+.getInTouchBtn:hover {
+    background-color: #001897;
+    border: 1px solid #001897;
+}
+
+.getInTouchPara1 {
+    font-size: 65px;
+}
+
+.getInTouchPara2 {
+    font-size: 26px;
+}
+
+/*Footer */
+.footerSection2 {
+    text-align: center;
+    color: #706E6E;
+    font-size: 14px;
+}
+
+.footerHeading {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.button-icon {
+    float: right;
+    height: 45px;
+    width: 45px;  
+    border: 1px solid #444444;
+    border-radius: 50%;
+    color: #444444;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: all 0.5s;
+}
+
+.button-icon:hover {
+    transform: scale(1.1);
 }
 
 /* Laptop */
@@ -257,7 +317,7 @@ input[type=submit]:hover {
         display: none;
     }
 } 
-
+/* Mobile */
 @media only screen and (max-width: 767px) {
     /*Navbar*/
 
@@ -336,6 +396,22 @@ input[type=submit]:hover {
 
     .formImg {
         width: 100%;
+    }
+
+    .getInTouchDiv {
+        text-align: left;
+    }
+
+    .getInTouchPara1 {
+        font-size: 30px;
+    }
+
+    .getInTouchPara2 {
+        font-size: 20px;
+    }
+
+    .footerSection2 {
+        text-align: left;
     }
 }
 
