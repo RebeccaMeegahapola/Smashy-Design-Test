@@ -218,11 +218,18 @@ input[type=text], select, textarea {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-    color: #444444;
 }
 
 input[type=text], select, textarea:focus {
     outline: none;
+}
+
+input[type=text], select, textarea::placeholder {
+    color: #444444;
+}
+
+select {
+    background-color: white;
 }
   
 input[type=submit] {
@@ -289,7 +296,6 @@ input[type=submit]:hover {
 }
 
 .button-icon {
-    float: right;
     height: 45px;
     width: 45px;  
     border: 1px solid #444444;
