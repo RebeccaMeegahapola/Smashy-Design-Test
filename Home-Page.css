@@ -41,6 +41,18 @@ body {
 .sm-icons .nav-link {
     padding-right: 1em;
 }
+
+.dropdownNavItems {
+    position: fixed;
+    top: 200px;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.dropdownNavItems .active {
+    transform: translateX(0);
+}
   
 /* Main content */
 
