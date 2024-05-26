@@ -83,3 +83,17 @@ const swiper = new Swiper(".swiper", {
 });
 
 
+//Home Banner
+window.addEventListener('scroll', function() {
+  const parallax = document.querySelector('.parallax');
+  const imgBtn = document.querySelector('.imgBtn');
+  const rect = parallax.getBoundingClientRect();
+
+  if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      imgBtn.style.display = 'block';
+  } else {
+      imgBtn.style.display = 'none';
+  }
+});
+
+

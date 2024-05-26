@@ -266,7 +266,7 @@ nav {
     background-color: #000F5C;
 }
 
-.parallax {
+/* .parallax {
     background-image: url("./images/image\ 17.png"); 
     min-height: 500px; 
     background-attachment: fixed;
@@ -274,7 +274,32 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-  }
+}
+
+.imgBtn {
+    position: absolute; 
+    bottom: 10%;
+    right: 50px;
+    padding: 12px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 31.5px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    width: max-content;
+    text-align: center;
+} */
+
+.parallax {
+    background-image: url("./images/image\ 17.png");
+    height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
 
 .imgBtn {
     position: fixed;
@@ -289,6 +314,7 @@ nav {
     font-size: 14px;
     width: max-content;
     text-align: center;
+    display: none; 
 }
 
 /* Accordion */
