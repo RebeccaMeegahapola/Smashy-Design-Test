@@ -1,3 +1,35 @@
+//Navbar
+$(document).ready(function () {
+  $(".mobileNav").click(function () {
+    $(this).toggleClass("active");
+    $(".navMain").toggleClass("active");
+    $(".subNav").removeClass("active");
+  });
+
+  $("#servicesNavButton").click(function () {
+    $(".subNav").toggleClass("active");
+  });
+
+  $("#subNavClose").click(function () {
+    $(".subNav").removeClass("active");
+    $(".navItem").removeClass("active");
+  });
+
+  $(".navItem").click(function () {
+    let target = $(this);
+    let other = $(".navItem").not(target);
+    target.addClass("active");
+    other.removeClass("active");
+  });
+  
+  $(".subNavItem").click(function () {
+    let target = $(this);
+    let other = $(".subNavItem").not(target);
+    target.addClass("active");
+    other.removeClass("active");
+  });
+});
+
 //slider
 const swiper = new Swiper(".swiper", {
   // Optional parameters
@@ -50,29 +82,4 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-$(document).ready(function () {
-  $(".mobileNav").click(function () {
-    $(this).toggleClass("active");
-    $(".navMain").toggleClass("active");
-    $(".subNav").removeClass("active");
-  });
-  $("#servicesNavButton").click(function () {
-    $(".subNav").toggleClass("active");
-  });
-  $("#subNavClose").click(function () {
-    $(".subNav").removeClass("active");
-    $(".navItem").removeClass("active");
-  });
-  $(".navItem").click(function () {
-    let target = $(this);
-    let other = $(".navItem").not(target);
-    target.addClass("active");
-    other.removeClass("active");
-  });
-  $(".subNavItem").click(function () {
-    let target = $(this);
-    let other = $(".subNavItem").not(target);
-    target.addClass("active");
-    other.removeClass("active");
-  });
-});
+
