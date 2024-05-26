@@ -53,5 +53,5 @@ const swiper = new Swiper('.swiper', {
 $(document).ready(function() {
     $("#dropdownNav").click(function() {
         $(".dropdownNavItems").toggleClass("active");
-     });
-    });
+    });
+});
