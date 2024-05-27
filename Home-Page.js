@@ -21,7 +21,7 @@ $(document).ready(function () {
     target.addClass("active");
     other.removeClass("active");
   });
-  
+
   $(".subNavItem").click(function () {
     let target = $(this);
     let other = $(".subNavItem").not(target);
@@ -82,17 +82,16 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-
 //Home Banner
-window.addEventListener('scroll', function() {
-  const parallax = document.querySelector('.parallax');
-  const imgBtn = document.querySelector('.imgBtn');
+window.addEventListener("scroll", function () {
+  const parallax = document.querySelector(".parallax");
+  const imgBtn = document.querySelector(".imgBtn");
   const rect = parallax.getBoundingClientRect();
 
   if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-      imgBtn.style.display = 'block';
+    imgBtn.style.display = "block";
   } else {
-      imgBtn.style.display = 'none';
+    imgBtn.style.display = "none";
   }
 });
 
@@ -100,9 +99,8 @@ window.addEventListener('scroll', function() {
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({
-  // Defaults are used by all ScrollTriggers
   toggleActions: "restart pause resume pause", // Scoll effect Forward, Leave, Back, Back Leave
-  markers: false // Easaly remove markers for production 
+  markers: false, // Easily remove markers for production
 });
 
 const timelineHeader = gsap.timeline({
@@ -111,18 +109,25 @@ const timelineHeader = gsap.timeline({
     trigger: "#header-zoom", // What element triggers the scroll
     scrub: 0.5, // Add a small delay of scrolling and animation. `true` is direct
     start: "top top", // Start at top of Trigger and at the top of the viewport
-    end: "+=100% 50px", // The element is 500px hight and end 50px from the top of the viewport
-		pin: true, // Pin the element true or false
-  }
+    end: "bottom top", // End when the bottom of the trigger hits the top of the viewport
+    pin: "#header-zoom", // Pin the element true or false
+    onEnterBack: () => {
+      gsap.to(".image-1", { scale: 1.1 });
+    }, // Scale up when scrolling back
+    onLeave: () => {
+      gsap.to(".image-1", { scale: 1 });
+    }, // Scale down when scrolling past the section
+  },
 });
 
 timelineHeader
+  .to(
+    ".image-1",
+    {
+      scale: 1.1,
+    },
+    "sameTime"
+  )
   .to(".image-1", {
-    scale: 1.5
-  }, "sameTime")
-  .to(".image-2", {
-    scale: 3 
-  }, "sameTime")
-
-
-
+    scale: 1,
+  });

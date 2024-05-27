@@ -479,35 +479,10 @@ input[type=submit]:hover {
 }
 
 /*Video*/
-
-section {
-    height: 100vh;
-    padding: 50px;
-    overflow: hidden;
-   
-    .zoom {
-      position: relative;
-      margin: 0 auto;
-      width: 100%;
-      height: 900px;
-      
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
-  
-      .image {
-        grid-area: 1 / 1 / 2 / 2;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
-    }
-  }
-  
+#header-zoom video {
+    width: 100%;
+    height: auto;
+}
 
 /*Nav styles*/
 @media only screen and (max-width: 991px) {
