@@ -97,25 +97,32 @@ window.addEventListener('scroll', function() {
 });
 
 //Video
-// Ensure GSAP and ScrollTrigger are loaded
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to("#myVideo", {
-  scrollTrigger: {
-    trigger: ".video-container",
-    start: "top top", // When the top of the video container hits the top of the viewport
-    end: "bottom top", // When the bottom of the video container hits the top of the viewport
-    scrub: true, // Smooth scrubbing
-    pin: true, // Pin the video in place
-    markers: false // Display markers for debugging
-  },
-  width: "100vw", // Expand to full viewport width
-  height: "100vh", // Expand to full viewport height
-  top: 0,
-  left: 0,
-  ease: "none"
+ScrollTrigger.defaults({
+  // Defaults are used by all ScrollTriggers
+  toggleActions: "restart pause resume pause", // Scoll effect Forward, Leave, Back, Back Leave
+  markers: false // Easaly remove markers for production 
 });
 
+const timelineHeader = gsap.timeline({
+  scrollTrigger: {
+    id: "ZOOM", // Custom label to the marker
+    trigger: "#header-zoom", // What element triggers the scroll
+    scrub: 0.5, // Add a small delay of scrolling and animation. `true` is direct
+    start: "top top", // Start at top of Trigger and at the top of the viewport
+    end: "+=100% 50px", // The element is 500px hight and end 50px from the top of the viewport
+		pin: true, // Pin the element true or false
+  }
+});
+
+timelineHeader
+  .to(".image-1", {
+    scale: 1.5
+  }, "sameTime")
+  .to(".image-2", {
+    scale: 3 
+  }, "sameTime")
 
 
 
