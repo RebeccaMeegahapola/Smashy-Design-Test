@@ -96,4 +96,17 @@ window.addEventListener('scroll', function() {
   }
 });
 
+//Video
+window.addEventListener('scroll', function() {
+  const container = document.getElementById('video-container');
+  const rect = container.getBoundingClientRect();
+  
+  if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
+      container.classList.add('expanded');
+  } else {
+      container.classList.remove('expanded');
+  }
+});
+
+
 
