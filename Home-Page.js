@@ -97,16 +97,25 @@ window.addEventListener('scroll', function() {
 });
 
 //Video
-window.addEventListener('scroll', function() {
-  const container = document.getElementById('video-container');
-  const rect = container.getBoundingClientRect();
-  
-  if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
-      container.classList.add('expanded');
-  } else {
-      container.classList.remove('expanded');
-  }
+// Ensure GSAP and ScrollTrigger are loaded
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to("#myVideo", {
+  scrollTrigger: {
+    trigger: ".video-container",
+    start: "top top", // When the top of the video container hits the top of the viewport
+    end: "bottom top", // When the bottom of the video container hits the top of the viewport
+    scrub: true, // Smooth scrubbing
+    pin: true, // Pin the video in place
+    markers: false // Display markers for debugging
+  },
+  width: "100vw", // Expand to full viewport width
+  height: "100vh", // Expand to full viewport height
+  top: 0,
+  left: 0,
+  ease: "none"
 });
+
 
 
 
