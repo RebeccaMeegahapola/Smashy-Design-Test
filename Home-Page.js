@@ -99,25 +99,25 @@ window.addEventListener("scroll", function () {
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({
-  toggleActions: "restart pause resume pause", // Scoll effect Forward, Leave, Back, Back Leave
-  markers: false, // Easily remove markers for production
+    toggleActions: "restart pause resume pause", // Scoll effect Forward, Leave, Back, Back Leave
+    markers: false, // Easily remove markers for production
 });
 
 const timelineHeader = gsap.timeline({
   scrollTrigger: {
-    id: "ZOOM", // Custom label to the marker
-    trigger: "#header-zoom", // What element triggers the scroll
-    scrub: 0.5, // Add a small delay of scrolling and animation. `true` is direct
-    start: "top top", // Start at top of Trigger and at the top of the viewport
-    end: "bottom top", // End when the bottom of the trigger hits the top of the viewport
-    pin: "#header-zoom", // Pin the element true or false
-    onEnterBack: () => {
-      gsap.to(".image-1", { scale: 1.1 });
-    }, // Scale up when scrolling back
-    onLeave: () => {
-      gsap.to(".image-1", { scale: 1 });
-    }, // Scale down when scrolling past the section
-  },
+      id: "ZOOM", // Custom label to the marker
+      trigger: "#header-zoom", // What element triggers the scroll
+      scrub: 0.5, // Add a small delay of scrolling and animation. `true` is direct
+      start: "top top", // Start at top of Trigger and at the top of the viewport
+      end: "bottom top", // End when the bottom of the trigger hits the top of the viewport
+      pin: "#header-zoom", // Pin the element true or false
+      onEnterBack: () => {
+        gsap.to(".image-1", { scale: 1.1 });
+      }, // Scale up when scrolling back
+      onLeave: () => {
+        gsap.to(".image-1", { scale: 1 });
+      }, // Scale down when scrolling past the section
+    },
 });
 
 timelineHeader

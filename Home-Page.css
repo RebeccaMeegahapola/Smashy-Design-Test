@@ -157,7 +157,6 @@ nav {
 }
 
 /* Main content */
-
 .main-header {
     margin: 120px auto 50px auto;
     padding: 0 50px 0 50px ;
@@ -179,6 +178,11 @@ nav {
     font-weight: 500;
     color: black;
     font-size: 16px;
+    transition: all 0.5s;
+}
+
+.desktopBtn, .firstBtn:hover {
+    transform: scale(1.1);
 }
 
 .desktopBtn img {
@@ -210,8 +214,13 @@ nav {
     padding: 5px 8px;
 }
 
-/* Slider */
+/*Video*/
+#header-zoom video {
+    width: 100%;
+    height: auto;
+}
 
+/* Slider */
 .swiper-slide img{
     width: 100%;
     height: auto;
@@ -249,7 +258,6 @@ nav {
 }
 
 /* About Us */
-
 .contactUs {
     padding: 12px;
     background: #001897;
@@ -260,36 +268,13 @@ nav {
     font-size: 14px;
     width: 25%;
     text-align: center;
+    transition: all 0.5s;
 }
 
 .contactUs:hover {
     background-color: #000F5C;
+    transform: scale(1.1);
 }
-
-/* .parallax {
-    background-image: url("./images/image\ 17.png"); 
-    min-height: 500px; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-}
-
-.imgBtn {
-    position: absolute; 
-    bottom: 10%;
-    right: 50px;
-    padding: 12px;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 31.5px;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    width: max-content;
-    text-align: center;
-} */
 
 .parallax {
     background-image: url("./images/image\ 17.png");
@@ -315,6 +300,11 @@ nav {
     width: max-content;
     text-align: center;
     display: none; 
+    transition: all 0.5s;
+}
+
+.imgBtn:hover {
+    transform: scale(1.1);
 }
 
 /* Accordion */
@@ -349,6 +339,7 @@ nav {
     background: #001897;
     border: 1px solid #001897;
     color: white;
+    transform: scale(1.1);
 }
 
 .ourProcessbtn i {
@@ -411,6 +402,7 @@ input[type=submit] {
   
 input[type=submit]:hover {
     background-color: #000F5C;
+    transform: scale(1.1);
 }
 
 .formImg {
@@ -433,11 +425,13 @@ input[type=submit]:hover {
     font-size: 20px;
     width: max-content;
     text-align: center;
+    transition: all 0.5s;
 }
 
 .getInTouchBtn:hover {
     background-color: #001897;
     border: 1px solid #001897;
+    transform: scale(1.1);
 }
 
 .getInTouchPara1 {
@@ -476,12 +470,6 @@ input[type=submit]:hover {
 
 .button-icon:hover {
     transform: scale(1.1);
-}
-
-/*Video*/
-#header-zoom video {
-    width: 100%;
-    height: auto;
 }
 
 /*Nav styles*/
